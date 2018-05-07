@@ -10,13 +10,13 @@ Data that used to train our model is available at: https://drive.google.com/open
 2. Tensorflow >= 1.4
 
 ## How to use
-These three model folders *nmt_model_naive_50w*, *nmt_attention_model_scaled_luong_50w*, *nmt_attention_model_bahdanau_50w* in this repo can produce the translations using three models we have trained. Train logs and checkpoints are contained inside each model folder.
+These three model folders *nmt_model_naive_50w*, , *nmt_attention_model_bahdanau_50w*, *nmt_attention_model_scaled_luong_50w*, *nmt_attention_model_scaled_luong_50w_deeper* in this repo can produce the translations using three models we have trained. Train logs and checkpoints are contained inside each model folder.
 
 You will need to do the following to use the checkpoints and generate translations from English to Chinese:
 
 1. Clone this git repo:
 ```
-git clone https://github.com/Epica-Wang/DeepLearning_nmt.git
+git clone https://github.com/Epica-Wang/DeepLearning_nmt_final
 ```
 
 2. Run the Python code to load the checkpoints and make inference.
@@ -40,7 +40,11 @@ git clone https://github.com/Epica-Wang/DeepLearning_nmt.git
   python predict_bahdanau.py
   ```
 
-  * To use nmt model with a deeper version of scaled_luong attention mechanism, please run:
+  * To use nmt model with a deeper version of scaled_luong attention mechanism, first you need to download checkpoints from (since Github does not allow to upload file larger than 1GB):
+  ```
+  https://drive.google.com/open?id=1qScfa599n0Soak1L3Ja0pjpy2xHHAB-t
+  ```
+  Then run:
   ```
   python predict_scaled_luong_deeper.py
   ```
